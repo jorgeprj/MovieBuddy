@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">myMovie</string>
+    <string name="app_name">MovieBuddy</string>
+    <string name="login">Entrar</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="random_movies">Filmes Aleatórios</string>
+    <string name="top_movies">Top Filmes</string>
+    <string name="search">Buscar</string>
+    <string name="favorites">Favoritos</string>
+    <string name="add_to_favorites">Adicionar aos Favoritos</string>
+    <string name="remove_from_favorites">Remover dos Favoritos</string>
+    <string name="rating">Nota: %1$s</string>
+    <string name="home_title">Filmes</string>
+    <string name="top_5_movies">Top 5 filmes</string>
 </resources>

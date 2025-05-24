@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MovieBuddy</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="random_movies">Random Movies</string>
+    <string name="top_movies">Top Movies</string>
+    <string name="search">Search</string>
+    <string name="favorites">Favorites</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    <string name="rating">Rating: %1$s</string>
+    <string name="home_title">Movies</string>
+    <string name="top_5_movies">Top 5 movies</string>
+</resources>
