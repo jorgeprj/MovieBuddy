@@ -12,8 +12,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import coil.compose.rememberAsyncImagePainter
 import com.example.moviebuddy.R
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import com.example.moviebuddy.ui.components.LoadingScreen
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailsScreen(movieId: Int, navController: NavHostController) {
     val context = LocalContext.current
@@ -23,34 +26,51 @@ fun DetailsScreen(movieId: Int, navController: NavHostController) {
     val movie by viewModel.movie.collectAsState()
     val isFavorite by viewModel.isFavorite.collectAsState()
 
-    Surface(modifier = Modifier.fillMaxSize()) {
-        movie?.let {
-            Column(modifier = Modifier.padding(16.dp)) {
-                Image(
-                    painter = rememberAsyncImagePainter(it.fullPosterUrl),
-                    contentDescription = it.title,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(400.dp)
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Text(it.title, style = MaterialTheme.typography.headlineSmall)
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    stringResource(id = R.string.rating, it.vote_average.toString()),
-                    style = MaterialTheme.typography.bodyMedium
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(it.overview, style = MaterialTheme.typography.bodyLarge)
-                Spacer(modifier = Modifier.height(16.dp))
-                Button(onClick = { viewModel.toggleFavorite() }) {
-                    Text(
-                        text = stringResource(
-                            id = if (isFavorite) R.string.remove_from_favorites else R.string.add_to_favorites
-                        )
-                    )
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(id = R.string.Details)) },
+                navigationIcon = {
+                    IconButton(onClick = { navController.popBackStack() }) {
+                        Icon(Icons.Default.ArrowBack, contentDescription = "Voltar")
+                    }
                 }
-            }
-        } ?: LoadingScreen()
+            )
+        }
+    ) { innerPadding ->
+        Surface(
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize()
+        ) {
+            movie?.let {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Image(
+                        painter = rememberAsyncImagePainter(it.fullPosterUrl),
+                        contentDescription = it.title,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(400.dp)
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(it.title, style = MaterialTheme.typography.headlineSmall)
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = stringResource(id = R.string.rating, it.vote_average.toString()),
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(it.overview, style = MaterialTheme.typography.bodyLarge)
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Button(onClick = { viewModel.toggleFavorite() }) {
+                        Text(
+                            text = stringResource(
+                                id = if (isFavorite) R.string.remove_from_favorites else R.string.add_to_favorites
+                            )
+                        )
+                    }
+                }
+            } ?: LoadingScreen()
+        }
     }
 }

@@ -45,6 +45,16 @@ fun HomeScreen(navController: NavController) {
                             contentDescription = stringResource(id = R.string.search)
                         )
                     }
+                    // Botão de Logoff
+                    TextButton(onClick = {
+                        // Limpa a pilha e volta para Login
+                        navController.navigate("login") {
+                            popUpTo("home") { inclusive = true }
+                            launchSingleTop = true
+                        }
+                    }) {
+                        Text(stringResource(id = R.string.logoff))
+                    }
                 }
             )
         }
