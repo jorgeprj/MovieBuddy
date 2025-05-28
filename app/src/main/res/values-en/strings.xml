@@ -10,6 +10,9 @@
     <string name="add_to_favorites">Add to Favorites</string>
     <string name="remove_from_favorites">Remove from Favorites</string>
     <string name="rating">Rating: %1$s</string>
+    <string name="Details">Description </string>
     <string name="home_title">Movies</string>
     <string name="top_5_movies">Top 5 movies</string>
+    <string name="logoff">logoff</string>
+    <string name="search_movies">Search movies</string>
 </resources>
