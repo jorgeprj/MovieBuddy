@@ -33,7 +33,7 @@ O **MovieBuddy** permite que o usuário navegue por filmes populares e top avali
 ### R5: Suporte básico a internacionalização (i18n)
 - [x] Strings definidas em arquivos `strings.xml`
 - [x] Suporte a pelo menos dois idiomas (português e inglês)
-- [ ] Remover strings hardcoded da UI
+- [x] Remover strings hardcoded da UI
 
 ### R6: Boas práticas e qualidade do projeto
 - [x] Uso de ViewModel para lógica e estado
@@ -66,6 +66,5 @@ O **MovieBuddy** permite que o usuário navegue por filmes populares e top avali
 
 ## Próximos passos e melhorias
 
-- Implementar suporte completo à internacionalização (R5)
 - Criar testes automatizados unitários e instrumentados (R6)
 - Melhorar tratamento de erros e mensagens ao usuário
