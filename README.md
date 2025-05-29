@@ -6,8 +6,8 @@ Aplicativo Android para explorar filmes usando a API TMDB, com interface moderna
 
 ## Alunos
 
--Giullio Gerolamo. RA:790965
--Jorge Pires. RA: 790942
+- Giullio Gerolamo. RA:790965
+- Jorge Pires. RA: 790942
 
 
 ---
