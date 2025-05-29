@@ -4,6 +4,14 @@ Aplicativo Android para explorar filmes usando a API TMDB, com interface moderna
 
 ---
 
+## Alunos
+
+-Giullio Gerolamo. RA:790965
+-Jorge Pires. RA: 790942
+
+
+---
+
 ## Sobre o Aplicativo
 
 O **MovieBuddy** permite que o usuário navegue por filmes populares e top avaliados, veja detalhes completos, pesquise filmes e gerencie uma lista de favoritos, tudo com uma interface construída em Jetpack Compose e Material Design.
